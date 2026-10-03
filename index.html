@@ -9,25 +9,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  color-scheme:light dark;
-  --bg:#F1F5F5; --surface:#FFFFFF; --ink:#1C2A2B; --muted:#4F5D60; --line:#BED6D8;
+  color-scheme:light;
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#1C2A2B; --muted:#4F5D60; --line:#BED6D8;
   --accent:#C69C62; --accent-ink:#1C2A2B; --teal:#0E505C; --hole:#BED6D8;
   --brand:#0E505C; --brand-ink:#FFFFFF; --maroon:#5D1F2C; --sky:#4CB3BD; --hero:#1C2A2B;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#141F20; --surface:#1C2A2B; --ink:#EEF4F4; --muted:#A3B5B7; --line:#2E4245;
-    --accent:#C69C62; --accent-ink:#1C2A2B; --teal:#4CB3BD; --hole:#2E4245;
-    --brand:#0E505C; --brand-ink:#FFFFFF; --maroon:#8A3445; --sky:#4CB3BD; --hero:#0E505C;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#141F20; --surface:#1C2A2B; --ink:#EEF4F4; --muted:#A3B5B7; --line:#2E4245;
-    --accent:#C69C62; --accent-ink:#1C2A2B; --teal:#4CB3BD; --hole:#2E4245;
-    --brand:#0E505C; --brand-ink:#FFFFFF; --maroon:#8A3445; --sky:#4CB3BD; --hero:#0E505C;
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -44,17 +32,17 @@ img{max-width:100%}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.5rem;padding-bottom:.5rem}
 .topbar img{height:84px;width:auto;display:block}
 .topbar span{font-family:"Chakra Petch",system-ui,sans-serif;font-weight:600;color:#0E505C;font-size:.95rem}
-header.hero{background:var(--hero);color:var(--brand-ink);padding:3rem 0 2.5rem;border-bottom:6px solid var(--accent)}
-header.hero .tag{color:#BED6D8}
-header.hero .channel{background:rgba(255,255,255,.06);border-color:rgba(76,179,189,.3)}
-header.hero .channel span{background:#0E505C;border-color:rgba(76,179,189,.25)}
+header.hero{background:#FFFFFF;color:var(--ink);padding:3rem 0 2.5rem;border-bottom:4px solid var(--accent)}
+header.hero .tag{color:var(--muted)}
+header.hero .channel{background:#FFFFFF;border-color:var(--line)}
+header.hero .channel span{background:#EAF2F3;border-color:var(--line)}
 header.hero .channel span:nth-child(8n+1){background:var(--accent);border-color:var(--accent)}
 header.hero .uni{margin:0 0 1rem;font-weight:500;color:var(--accent);font-size:.95rem;letter-spacing:.08em}
 .channel{display:flex;gap:12px;padding:5px 8px;height:24px;margin-bottom:2rem;
   background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden}
 .channel span{flex:0 0 12px;height:12px;border-radius:2px;background:var(--hole);border:1px solid var(--line)}
 .channel span:nth-child(8n+1){background:var(--accent);border-color:var(--accent)}
-h1{font-size:clamp(4rem,18vw,9rem);line-height:.85;margin:0;font-weight:700;letter-spacing:-.02em}
+h1{font-size:clamp(4rem,18vw,9rem);line-height:.85;margin:0;font-weight:700;letter-spacing:-.02em;color:#0E505C}
 .sub{font-size:1.15rem;margin:.9rem 0 .25rem;font-weight:500}
 .tag{color:var(--muted);margin:0}
 
@@ -75,8 +63,7 @@ h1{font-size:clamp(4rem,18vw,9rem);line-height:.85;margin:0;font-weight:700;lett
 .sec>summary:hover h2{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 .num{font-weight:700;font-size:1.05rem;width:3rem;height:2.4rem;display:grid;place-items:center;
   border:2px solid var(--brand);color:var(--brand);border-radius:5px}
-:root[data-theme="dark"] .num{border-color:var(--sky);color:var(--sky)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .num{border-color:var(--sky);color:var(--sky)}}
+
 .sec[open] .num{background:var(--maroon)!important;border-color:var(--maroon)!important;color:#FFFFFF!important}
 .sec h2{margin:0;font-size:1.25rem;font-weight:600;line-height:1.25}
 .sec h2 small{display:block;font:400 .9rem/1.4 "IBM Plex Sans",system-ui,sans-serif;color:var(--muted);margin-top:.2rem}
@@ -126,7 +113,7 @@ tfoot td{font-weight:600;background:var(--bg)}
 .steps b{display:block}
 .steps .when{color:var(--teal);font-weight:600;font-size:.9rem}
 
-footer{margin-top:2.5rem;padding:2rem 0 2.5rem;background:var(--hero);color:#BED6D8;font-size:.9rem;border-top:6px solid var(--accent)}
+footer{margin-top:2.5rem;padding:2rem 0 2.5rem;background:#FFFFFF;color:var(--ink);font-size:.9rem;border-top:4px solid var(--accent)}
 footer p{margin:0}
 
 @media (max-width:600px){
