@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SHIFT Club Handbook 2026–2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:#F1F5F5; --surface:#FFFFFF; --ink:#1C2A2B; --muted:#4F5D60; --line:#BED6D8;
+  --accent:#C69C62; --accent-ink:#1C2A2B; --teal:#0E505C; --hole:#BED6D8;
+  --brand:#0E505C; --brand-ink:#FFFFFF; --maroon:#5D1F2C; --sky:#4CB3BD; --hero:#1C2A2B;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141F20; --surface:#1C2A2B; --ink:#EEF4F4; --muted:#A3B5B7; --line:#2E4245;
+    --accent:#C69C62; --accent-ink:#1C2A2B; --teal:#4CB3BD; --hole:#2E4245;
+    --brand:#0E505C; --brand-ink:#FFFFFF; --maroon:#8A3445; --sky:#4CB3BD; --hero:#0E505C;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141F20; --surface:#1C2A2B; --ink:#EEF4F4; --muted:#A3B5B7; --line:#2E4245;
+    --accent:#C69C62; --accent-ink:#1C2A2B; --teal:#4CB3BD; --hole:#2E4245;
+    --brand:#0E505C; --brand-ink:#FFFFFF; --maroon:#8A3445; --sky:#4CB3BD; --hero:#0E505C;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:400 1rem/1.6 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3,.num,.btn{font-family:"Chakra Petch","Segoe UI",system-ui,sans-serif}
+a{color:var(--teal)}
+img{max-width:100%}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.25rem}
+
+/* Hero */
+/* Top bar with logo */
+.topbar{background:#FFFFFF;border-bottom:1px solid #BED6D8}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.5rem;padding-bottom:.5rem}
+.topbar img{height:84px;width:auto;display:block}
+.topbar span{font-family:"Chakra Petch",system-ui,sans-serif;font-weight:600;color:#0E505C;font-size:.95rem}
+header.hero{background:var(--hero);color:var(--brand-ink);padding:3rem 0 2.5rem;border-bottom:6px solid var(--accent)}
+header.hero .tag{color:#BED6D8}
+header.hero .channel{background:rgba(255,255,255,.06);border-color:rgba(76,179,189,.3)}
+header.hero .channel span{background:#0E505C;border-color:rgba(76,179,189,.25)}
+header.hero .channel span:nth-child(8n+1){background:var(--accent);border-color:var(--accent)}
+header.hero .uni{margin:0 0 1rem;font-weight:500;color:var(--accent);font-size:.95rem;letter-spacing:.08em}
+.channel{display:flex;gap:12px;padding:5px 8px;height:24px;margin-bottom:2rem;
+  background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.channel span{flex:0 0 12px;height:12px;border-radius:2px;background:var(--hole);border:1px solid var(--line)}
+.channel span:nth-child(8n+1){background:var(--accent);border-color:var(--accent)}
+h1{font-size:clamp(4rem,18vw,9rem);line-height:.85;margin:0;font-weight:700;letter-spacing:-.02em}
+.sub{font-size:1.15rem;margin:.9rem 0 .25rem;font-weight:500}
+.tag{color:var(--muted);margin:0}
+
+/* Controls */
+.controls{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between;
+  padding:1.25rem 0 1rem}
+.controls p{margin:0;color:var(--muted);font-size:.95rem}
+.btn{font-weight:600;font-size:.95rem;padding:.5rem .9rem;border-radius:6px;cursor:pointer;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn:hover{border-color:var(--ink)}
+.btns{display:flex;gap:.5rem}
+
+/* Sections */
+.sec{border-bottom:1px solid var(--line)}
+.sec>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:3.2rem 1fr 2rem;
+  gap:.75rem;align-items:center;padding:1.1rem .25rem;border-radius:6px}
+.sec>summary::-webkit-details-marker{display:none}
+.sec>summary:hover h2{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.num{font-weight:700;font-size:1.05rem;width:3rem;height:2.4rem;display:grid;place-items:center;
+  border:2px solid var(--brand);color:var(--brand);border-radius:5px}
+:root[data-theme="dark"] .num{border-color:var(--sky);color:var(--sky)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .num{border-color:var(--sky);color:var(--sky)}}
+.sec[open] .num{background:var(--maroon)!important;border-color:var(--maroon)!important;color:#FFFFFF!important}
+.sec h2{margin:0;font-size:1.25rem;font-weight:600;line-height:1.25}
+.sec h2 small{display:block;font:400 .9rem/1.4 "IBM Plex Sans",system-ui,sans-serif;color:var(--muted);margin-top:.2rem}
+.chev{width:1.4rem;height:1.4rem;justify-self:end;transition:transform .2s}
+.sec[open] .chev{transform:rotate(45deg)}
+summary:focus-visible,.btn:focus-visible,.more>summary:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+
+.body{padding:.25rem 0 1.75rem 4rem}
+.brief{background:var(--surface);border-left:4px solid var(--accent);padding:1rem 1.2rem;border-radius:0 6px 6px 0;margin:0 0 1rem}
+.brief p{margin:0}
+.more>summary{cursor:pointer;font-weight:600;color:var(--teal);padding:.3rem 0;width:max-content}
+.more[open]>summary{margin-bottom:.75rem}
+.more .lbl-close{display:none}
+.more[open] .lbl-open{display:none}
+.more[open] .lbl-close{display:inline}
+.body h3{font-size:1.05rem;margin:1.4rem 0 .5rem;font-weight:600}
+.body ul,.body ol{padding-left:1.2rem;margin:.4rem 0}
+.body li{margin:.25rem 0}
+
+.tbl{overflow-x:auto;margin:.5rem 0 1rem;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{text-align:left;padding:.55rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"Chakra Petch",system-ui,sans-serif;font-weight:600;background:var(--brand);color:#FFFFFF}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right;white-space:nowrap}
+tfoot td{font-weight:600;background:var(--bg)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1rem}
+.card{border-top:3px solid var(--brand)}
+.card h3{margin:0}
+.card .who{margin:.1rem 0 .4rem;font-weight:500}
+.card .focus{color:var(--muted);font-size:.88rem;margin:0 0 .5rem}
+.card p{margin:.3rem 0;font-size:.93rem}
+.card ul{font-size:.9rem}
+
+.chain{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.node{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.6rem .9rem}
+.node:first-child{border-left:4px solid var(--maroon)}
+.node b{font-family:"Chakra Petch",system-ui,sans-serif}
+.node span{display:block;color:var(--muted);font-size:.9rem}
+.link{width:2px;height:16px;background:var(--accent);margin-left:1.4rem}
+
+.steps{list-style:none;padding:0!important;counter-reset:s}
+.steps li{position:relative;padding:.6rem 0 .6rem 2.4rem;border-left:2px solid var(--line);margin:0 0 0 .7rem!important}
+.steps li::before{content:"";position:absolute;left:-.45rem;top:.95rem;width:.8rem;height:.8rem;border-radius:2px;background:var(--accent)}
+.steps b{display:block}
+.steps .when{color:var(--teal);font-weight:600;font-size:.9rem}
+
+footer{margin-top:2.5rem;padding:2rem 0 2.5rem;background:var(--hero);color:#BED6D8;font-size:.9rem;border-top:6px solid var(--accent)}
+footer p{margin:0}
+
+@media (max-width:600px){
+  .sec>summary{grid-template-columns:2.6rem 1fr 1.5rem;gap:.6rem}
+  .num{width:2.5rem;height:2.1rem;font-size:.95rem}
+  .body{padding-left:0}
+  .sec h2{font-size:1.1rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><img src="data:image/jpeg;base64,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" alt="SHIFT, Robotics Programming AI, KU est. 2026"><span>Handbook 2026–2027</span></div></div>
+<header class="hero"><div class="wrap">
+  <p class="uni">KU, est. 2026</p>
+  <div class="channel" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <h1>SHIFT</h1>
+  <p class="sub">Robotics, Programming &amp; AI Club handbook, 2026–2027</p>
+  <p class="tag">Students supporting students. Team structure, role ownership, and leadership commitment.</p>
+</div></header>
+
+<div class="wrap">
+  <div class="controls">
+    <p>Tap a section to see its summary.</p>
+    <div class="btns">
+      <button class="btn" id="openAll" type="button">Open all</button>
+      <button class="btn" id="closeAll" type="button">Close all</button>
+    </div>
+  </div>
+
+<main>
+
+<!-- 01 -->
+<details class="sec">
+  <summary><span class="num">01</span><h2>Leadership &amp; working structure<small>How leadership is organized</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>SHIFT's leadership runs in five levels: the Faculty Advisor, the President, the Vice President, the Directors, and the Leads. Every lead owns a clear area, and the whole team works on four values: ownership, accountability, collaboration, and continuous improvement. Roles are distinct; success is collective.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <h3>Core values</h3>
+      <ul>
+        <li><b>Ownership:</b> every lead owns a clear area and is accountable for progress within it.</li>
+        <li><b>Accountability:</b> commitments, deadlines, communication, and documentation matter.</li>
+        <li><b>Collaboration:</b> cross-team work is expected; departments coordinate rather than work in silos.</li>
+        <li><b>Continuous improvement:</b> teams review what worked, what did not, and what should change next.</li>
+      </ul>
+      <h3>Leadership architecture</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>Tier</th><th>Ownership</th><th>Roles</th></tr></thead>
+        <tbody>
+          <tr><td>Advisor</td><td>Guidance &amp; oversight</td><td>Faculty Advisor, Prof. Saif Safwan</td></tr>
+          <tr><td>President</td><td>Strategy, vision &amp; governance</td><td>Raneem Alqahtani</td></tr>
+          <tr><td>Vice President</td><td>Operations &amp; cross-team flow</td><td>Bassam Al-Qarni</td></tr>
+          <tr><td>Directors</td><td>Functional leadership</td><td>Finance, Technical, Competition</td></tr>
+          <tr><td>Leads</td><td>Department execution</td><td>Business &amp; Partnerships, Events &amp; Community, Marketing, Media, Operations, Technical Lead</td></tr>
+        </tbody>
+      </table></div>
+    </details>
+  </div>
+</details>
+
+<!-- 02 -->
+<details class="sec">
+  <summary><span class="num">02</span><h2>Organizational map<small>The leadership chain</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>One leadership chain runs from the faculty advisor down to members. Within it, every department works side by side on projects, events, recruitment, competitions, and partnerships.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <div class="chain">
+        <div class="node"><b>Faculty Advisor</b><span>Prof. Saif Safwan</span></div><div class="link"></div>
+        <div class="node"><b>Executive leadership</b><span>President, Vice President</span></div><div class="link"></div>
+        <div class="node"><b>Directors</b><span>Finance, Technical, Competition</span></div><div class="link"></div>
+        <div class="node"><b>Department leads</b><span>Business &amp; Partnerships, Events &amp; Community, Marketing, Media, Operations, Technical Lead</span></div><div class="link"></div>
+        <div class="node"><b>Members</b><span>Project teams, workshops, VEX team</span></div>
+      </div>
+    </details>
+  </div>
+</details>
+
+<!-- 03 -->
+<details class="sec">
+  <summary><span class="num">03</span><h2>Leadership team<small>11 roles and who holds them</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>Eleven students lead SHIFT this year, each with a defined purpose and set of responsibilities, from strategy and finance to media and day-to-day operations. Every lead has signed a commitment to take ownership, communicate early, and support the wider team.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show all roles</span><span class="lbl-close">Hide roles</span></summary>
+      <div class="grid">
+        <div class="card"><h3>President</h3><p class="who">Raneem Alqahtani</p><p class="focus">Strategy, vision, governance</p>
+          <p>Provides strategic leadership so the club moves as one organization toward shared goals.</p>
+          <ul><li>Sets direction, priorities, and long-term vision</li><li>Leads the executive team and aligns departments</li><li>Represents the club in university and external engagements</li><li>Oversees major decisions and organizational development</li><li>Keeps the club true to its values and standards</li></ul></div>
+        <div class="card"><h3>Vice President</h3><p class="who">Bassam Al-Qarni</p><p class="focus">Operations, cross-team flow, support</p>
+          <p>Turns strategy into coordinated execution and keeps teams aligned and moving.</p>
+          <ul><li>Supports the President in executing strategy</li><li>Coordinates communication between departments</li><li>Monitors progress and resolves cross-team dependencies</li><li>Supports leads in planning and accountability</li><li>Acts as the coordination point when the President is unavailable</li></ul></div>
+        <div class="card"><h3>Finance Director</h3><p class="who">Shahad Alotaibi</p><p class="focus">Budget, procurement, financial reporting</p>
+          <p>Protects the club's financial sustainability through responsible planning and reporting.</p>
+          <ul><li>Builds annual and project budgets</li><li>Tracks spending, purchases, and reimbursements</li><li>Coordinates procurement requests</li><li>Prepares financial reports for leadership and the university</li><li>Keeps transparent, organized records</li></ul></div>
+        <div class="card"><h3>Technical Director</h3><p class="who">Fares Alyaqout</p><p class="focus">Engineering, R&amp;D, autonomous systems</p>
+          <p>Owns the technical direction and grows strong engineering and programming.</p>
+          <ul><li>Leads robotics and programming activities</li><li>Sets engineering standards and workflows</li><li>Oversees R&amp;D, robot development, and autonomous systems</li><li>Supports technical training and knowledge transfer</li><li>Ensures projects are documented and tested</li></ul></div>
+        <div class="card"><h3>Competition Director</h3><p class="who">Abdulrahman Tarazy</p><p class="focus">Tournaments, preparation, strategy</p>
+          <p>Builds competition readiness through structured preparation and review.</p>
+          <ul><li>Leads competition planning and readiness</li><li>Sets timelines, prep plans, and milestones</li><li>Coordinates teams during practices and tournaments</li><li>Tracks rules, requirements, and deadlines</li><li>Runs post-competition reviews</li></ul></div>
+        <div class="card"><h3>Business &amp; Partnerships Lead</h3><p class="who">Wadha Alshwaish</p><p class="focus">Sponsorships, industry outreach, grants</p>
+          <p>Builds external relationships that bring opportunities and resources to the club.</p>
+          <ul><li>Maintains relationships with sponsors and partners</li><li>Develops sponsorship opportunities</li><li>Coordinates outreach, proposals, and follow-ups</li><li>Explores grants and industry collaborations</li><li>Keeps records of external commitments</li></ul></div>
+        <div class="card"><h3>Events &amp; Community Lead</h3><p class="who">Lana Al-Qahtani</p><p class="focus">Showcases, member experience, community</p>
+          <p>Creates an active, welcoming community through strong events.</p>
+          <ul><li>Plans events, workshops, and showcases</li><li>Creates a welcoming member experience</li><li>Coordinates logistics with other teams</li><li>Supports engagement and retention</li><li>Collects feedback to improve</li></ul></div>
+        <div class="card"><h3>Marketing Lead</h3><p class="who">Lara Wassif</p><p class="focus">Branding, growth, campaign strategy</p>
+          <p>Grows the club's visibility through consistent branding and strategic campaigns.</p>
+          <ul><li>Owns marketing direction and brand consistency</li><li>Runs awareness and recruitment campaigns</li><li>Plans content calendars with the Media team</li><li>Aligns messaging across all activities</li><li>Tracks campaign performance</li></ul></div>
+        <div class="card"><h3>Media Lead</h3><p class="who">Shumokh Bagazi</p><p class="focus">Visual arts, storytelling, content</p>
+          <p>Tells the club's story through high-quality visual content.</p>
+          <ul><li>Leads visual identity and content production</li><li>Manages photography, video, and graphics</li><li>Documents projects, events, and achievements</li><li>Works with Marketing on content</li><li>Keeps media files organized</li></ul></div>
+        <div class="card"><h3>Operations Lead</h3><p class="who">Lama Aldehaimi</p><p class="focus">Execution, logistics, internal coordination</p>
+          <p>Makes sure plans become organized, timely execution.</p>
+          <ul><li>Turns decisions into operational actions</li><li>Coordinates logistics, schedules, and resources</li><li>Supports day-to-day execution</li><li>Tracks action items and deadlines</li><li>Identifies gaps and proposes improvements</li></ul></div>
+        <div class="card"><h3>Technical Lead</h3><p class="who">Sari Alghamdi</p><p class="focus">Technical work, team support</p>
+          <p>Supports the Technical Director so robotics and programming tasks are organized, tested, and completed.</p>
+          <ul><li>Supports daily technical activities</li><li>Coordinates robotics and programming tasks</li><li>Supports design, building, testing, and troubleshooting</li><li>Reports progress and issues to the Technical Director</li><li>Helps run workshops and mentors newer members</li></ul></div>
+      </div>
+    </details>
+  </div>
+</details>
+
+<!-- 04 -->
+<details class="sec">
+  <summary><span class="num">04</span><h2>Shared leadership standard<small>Commitments every lead makes</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>The role may be individual, but the responsibility is collective. Every lead commits to six standards covering ownership, early communication, collaboration, professionalism, documentation, and helping others learn.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <ul>
+        <li>I take ownership of my responsibilities and follow through on commitments.</li>
+        <li>I communicate early when priorities, risks, or deadlines change.</li>
+        <li>I collaborate across departments when the work requires it.</li>
+        <li>I represent SHIFT professionally and respectfully.</li>
+        <li>I document important decisions, progress, and handovers.</li>
+        <li>I help build an environment where students learn from and support one another.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<!-- 05 -->
+<details class="sec">
+  <summary><span class="num">05</span><h2>Activities &amp; initiatives<small>The 2026–2027 activity portfolio</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>Eight activities make up the first year: expert talks, the VEX Robotics Competition, programming, robotics and AI workshops, a hackathon, a robotics project day, and a campus showcase. Each one has an owner, a timeline, deliverables, and post-activity documentation.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <div class="tbl"><table>
+        <thead><tr><th>Activity</th><th>Purpose</th><th>Timing</th><th>Participation</th></tr></thead>
+        <tbody>
+          <tr><td>Expert Talk</td><td>Learn from experts and industry professionals</td><td>TBD</td><td>20–30 students</td></tr>
+          <tr><td>VEX Robotics Competition</td><td>Design, build, and program robots for national engineering challenges</td><td>2026–2027</td><td>10 students</td></tr>
+          <tr><td>Introductory Programming Workshop</td><td>Hands-on training in core programming principles</td><td>TBD</td><td>All members</td></tr>
+          <tr><td>Fundamentals of Robotics</td><td>Robotics mechanics, sensors, and hardware integration</td><td>TBD</td><td>All members</td></tr>
+          <tr><td>AI &amp; Machine Learning Workshop</td><td>Practical applications of AI and ML models</td><td>TBD</td><td>15–25 students</td></tr>
+          <tr><td>Coding Challenge / Hackathon</td><td>Competitive coding to build problem-solving skills</td><td>TBD</td><td>10 students</td></tr>
+          <tr><td>Robotics Project Day</td><td>Design, build, and test physical robotics projects</td><td>TBD</td><td>Project teams</td></tr>
+          <tr><td>Project Showcase</td><td>Present club projects and prototypes to campus</td><td>TBD</td><td>Open to KU</td></tr>
+        </tbody>
+      </table></div>
+    </details>
+  </div>
+</details>
+
+<!-- 06 -->
+<details class="sec">
+  <summary><span class="num">06</span><h2>Meetings &amp; communication<small>Weekly rhythm and meeting standards</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>Executives and directors sync every Monday, departments meet mid-week, and the whole club gathers once a month. Agendas go out 24 hours ahead, Operations records minutes and action items, and open items carry over until they are done.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <h3>Weekly meeting structure</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>When</th><th>Meeting</th><th>Who</th></tr></thead>
+        <tbody>
+          <tr><td>Monday</td><td><b>Executive &amp; directors sync:</b> progress, budget, milestones, and blockers</td><td>President, VP, Directors</td></tr>
+          <tr><td>Wednesday / Thursday</td><td><b>Department meetings:</b> delegate tasks, track deliverables, share updates</td><td>Leads and their teams</td></tr>
+          <tr><td>Monthly</td><td><b>All-hands gathering:</b> celebrate milestones, project updates, upcoming events</td><td>All members</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Meeting standards</h3>
+      <ul>
+        <li><b>Agenda sharing:</b> agendas are shared 24 hours before any meeting through official channels.</li>
+        <li><b>Action items &amp; minutes:</b> Operations tracks minutes, decisions, and action items with deadlines.</li>
+        <li><b>Accountability:</b> leads report on key indicators and follow through on commitments.</li>
+        <li><b>Decision log:</b> decisions affecting several teams are documented and shared.</li>
+        <li><b>Follow-up:</b> open items are reviewed at the next meeting until completed or reassigned.</li>
+      </ul>
+      <h3>Every meeting, three steps</h3>
+      <ol>
+        <li><b>Prepare:</b> review the agenda and bring updates, questions, and blockers.</li>
+        <li><b>Participate:</b> contribute clearly, listen actively, focus on decisions.</li>
+        <li><b>Deliver:</b> complete action items by the deadline and report progress.</li>
+      </ol>
+    </details>
+  </div>
+</details>
+
+<!-- 07 -->
+<details class="sec">
+  <summary><span class="num">07</span><h2>Team operating principles<small>How SHIFT works together</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>Five principles guide daily work: one shared direction, clear ownership of every task, raising blockers early, keeping progress documented, and designing every activity so members grow through hands-on experience.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <ul>
+        <li><b>One direction:</b> each department has its own responsibilities, but all work supports the same vision.</li>
+        <li><b>Clear ownership:</b> tasks get an owner and a deadline and are followed through to completion.</li>
+        <li><b>Open communication:</b> blockers are raised early, not after a deadline is missed.</li>
+        <li><b>Documented progress:</b> decisions, meeting outcomes, and project information stay accessible.</li>
+        <li><b>Student growth:</b> activities are designed to develop members, not only to produce outcomes.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<!-- 08 -->
+<details class="sec">
+  <summary><span class="num">08</span><h2>Community &amp; membership<small>Who can join and what's expected</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>SHIFT is open to KU students interested in robotics, programming, AI, hardware, and engineering. The club has 21 core active students, including a VEX team of 10 students. Members are expected to attend, take ownership of their tasks, and respect equipment, teammates, and university policies.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <div class="tbl"><table>
+        <thead><tr><th>Area</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Core active members</td><td>21 students</td></tr>
+          <tr><td>VEX competition team</td><td>10 students</td></tr>
+          <tr><td>General members</td><td>Students joining workshops, projects, programming, AI, and club activities</td></tr>
+          <tr><td>Technical development</td><td>Robotics, programming, AI, electronics, CAD/design, embedded systems</td></tr>
+          <tr><td>Community contribution</td><td>Members participate actively and support club projects</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Membership expectations</h3>
+      <ul>
+        <li>Attend required meetings and activities on time.</li>
+        <li>Give at least 24 hours' notice for an absence when possible.</li>
+        <li>Take ownership of assigned project or workshop tasks.</li>
+        <li>Respect club equipment, workspace, teammates, and university policies.</li>
+        <li>Communicate professionally through official club channels.</li>
+        <li>Maintain academic integrity and respect intellectual property.</li>
+        <li>Contribute to a collaborative, inclusive technical community.</li>
+      </ul>
+      <h3>Members</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>Name</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><td>Raneem Alqahtani</td><td>President</td></tr>
+          <tr><td>Bassam Al-Qarni</td><td>Vice President</td></tr>
+          <tr><td>Shahad Alotaibi</td><td>Finance Director</td></tr>
+          <tr><td>Fares Alyaqout</td><td>Technical Director</td></tr>
+          <tr><td>Abdulrahman Tarazy</td><td>Competition Director</td></tr>
+          <tr><td>Lama Aldehaimi</td><td>Operations Lead</td></tr>
+          <tr><td>Lara Wassif</td><td>Marketing Lead</td></tr>
+          <tr><td>Shumokh Bagazi</td><td>Media Lead</td></tr>
+          <tr><td>Lana Al-Qahtani</td><td>Events &amp; Community Lead</td></tr>
+          <tr><td>Wadha Alshwaish</td><td>Business &amp; Partnerships Lead</td></tr>
+          <tr><td>Sari Alghamdi</td><td>Technical Lead</td></tr>
+          <tr><td>Faisal Alsebiheen</td><td>Member</td></tr>
+          <tr><td>Jory Alahmedi</td><td>Member</td></tr>
+          <tr><td>Mohammed Almozaiyen</td><td>Member</td></tr>
+          <tr><td>Jana Najjar</td><td>Member</td></tr>
+          <tr><td>Wateen Almalki</td><td>Member</td></tr>
+          <tr><td>Hasna Abduljalil</td><td>Member</td></tr>
+          <tr><td>Faisal Alqahtani</td><td>Member</td></tr>
+          <tr><td>Saad Almuneef</td><td>Member</td></tr>
+          <tr><td>Layal Alanazi</td><td>Member</td></tr>
+          <tr><td>Alwaleed Alshuhri</td><td>Member</td></tr>
+          <tr><td>Liliyan Almazyad</td><td>Member</td></tr>
+        </tbody>
+      </table></div>
+    </details>
+  </div>
+</details>
+
+<!-- 09 -->
+<details class="sec">
+  <summary><span class="num">09</span><h2>Community rules<small>Conduct, safety, and accountability</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>Eight rules keep the club safe and fair. More than three unexcused absences can lead to a membership review, and three inactive weeks may count as withdrawal. Equipment must be logged, safety procedures followed, and harassment or dishonest work is never accepted.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <ul>
+        <li><b>Attendance &amp; punctuality:</b> more than three unexcused absences may lead to a role or membership review.</li>
+        <li><b>Active participation:</b> members contribute to an approved activity; three consecutive inactive weeks without approval may be treated as voluntary withdrawal.</li>
+        <li><b>Equipment accountability:</b> components and tools are logged out and back in; damage or loss is reported immediately; nothing leaves without authorization.</li>
+        <li><b>Deadlines:</b> respect sprint commitments, task deadlines, and competition milestones.</li>
+        <li><b>Professional communication:</b> use KU email and approved channels; public posts representing SHIFT need approval.</li>
+        <li><b>Academic integrity:</b> plagiarism, unauthorized copying, or dishonest technical work is not acceptable.</li>
+        <li><b>Respect &amp; inclusion:</b> discrimination, harassment, bullying, and disrespect are not tolerated.</li>
+        <li><b>Safety:</b> follow workspace, electronics, tools, and robotics safety procedures at all times.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<!-- 10 -->
+<details class="sec">
+  <summary><span class="num">10</span><h2>Facilities &amp; space<small>What the robotics lab needs</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>SHIFT needs a dedicated robotics lab for building, programming, testing, storage, meetings, and workshops. It should stay organized, safe, and ready for both regular activities and intense competition prep.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <ul>
+        <li>A dedicated lab space for robot construction, testing, programming, and project work.</li>
+        <li>Tables for assembly, electronics, programming, and group work.</li>
+        <li>Chairs for workshops, meetings, and project sessions.</li>
+        <li>Drawers and storage for components, tools, cables, and competition materials.</li>
+        <li>Safe, accessible storage for VEX and Arduino equipment.</li>
+        <li>Reliable power with enough outlets for computers, chargers, and robots.</li>
+        <li>A clear testing area where robots can run safely.</li>
+        <li>Room for two high-performance computers.</li>
+        <li>An equipment check-in and check-out system.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<!-- 11 -->
+<details class="sec">
+  <summary><span class="num">11</span><h2>VEX Robotics Competition<small>The club's main competition pathway</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>A 10-member team will prepare from October 2026 to April 2027, moving through eight phases from orientation to competition review. The focus is VEX V5 hardware, sensors, mechanisms, and autonomous programming, with a coach guiding the team and every iteration documented.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <div class="tbl"><table>
+        <thead><tr><th>Area</th><th>Plan</th></tr></thead>
+        <tbody>
+          <tr><td>Team size</td><td>10 VEX members</td></tr>
+          <tr><td>Preparation</td><td>October 2026 – April 2027</td></tr>
+          <tr><td>Practice</td><td>Build, programming, testing, driver practice, and strategy sessions</td></tr>
+          <tr><td>Technical focus</td><td>V5 hardware, sensors, motors, drivetrain, mechanisms, autonomous programming, troubleshooting</td></tr>
+          <tr><td>Documentation</td><td>Engineering decisions, test results, iterations, and prep are documented</td></tr>
+          <tr><td>Coach / mentor</td><td>Guides technical work, competition prep, safety, and team development</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Preparation phases</h3>
+      <ol class="steps">
+        <li><b>Orientation</b>Competition intro, rules, roles, safety, team formation</li>
+        <li><b>Fundamentals</b>V5 hardware, tools, motors, sensors, drivetrain, programming basics</li>
+        <li><b>Design</b>Game analysis, strategy, sketches, CAD, mechanism planning</li>
+        <li><b>Build</b>Construction, subsystem integration, wiring, iteration</li>
+        <li><b>Programming</b>Driver control, autonomous routines, sensors, debugging</li>
+        <li><b>Testing</b>Reliability checks, tuning, driver practice, performance tracking</li>
+        <li><b>Competition readiness</b>Strategy, scouting, documentation, inspection, mock matches</li>
+        <li><b>Competition &amp; review</b>Compete, analyze matches, plan improvements</li>
+      </ol>
+    </details>
+  </div>
+</details>
+
+<!-- 12 -->
+<details class="sec">
+  <summary><span class="num">12</span><h2>VEX team<small>Sub-teams and assignments</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>The VEX team is split into four sub-teams: Relations led by Layal Alanazi, Mechanical led by Fares Alyaqout, Design led by Jory Alahmedi, and Programming led by Mohammed Almozaiyen.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <div class="tbl"><table>
+        <thead><tr><th>Sub-team</th><th>Members</th></tr></thead>
+        <tbody>
+          <tr><td>Relations</td><td>Layal Alanazi (lead), Bassam Al-Qarni</td></tr>
+          <tr><td>Mechanical</td><td>Fares Alyaqout (lead), Lama Aldehaimi, Shahad Alotaibi, Raneem Alqahtani</td></tr>
+          <tr><td>Design</td><td>Jory Alahmedi (lead), Faisal Alqahtani</td></tr>
+          <tr><td>Programming</td><td>Mohammed Almozaiyen (lead), Liliyan Almazyad</td></tr>
+        </tbody>
+      </table></div>
+    </details>
+  </div>
+</details>
+
+<!-- 13 -->
+<details class="sec">
+  <summary><span class="num">13</span><h2>VEX coach<small>Who we're looking for</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>SHIFT is looking for a coach with proven VEX experience who can teach as well as build, train the team from the start of prep through competition day, and help students build, program, drive, and document a competitive robot themselves.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <h3>Must-have</h3>
+      <ul>
+        <li>Verifiable VEX V5RC or VEX U experience as competitor, coach, or mentor; VEX U is best.</li>
+        <li>Can explain building, programming, and strategy to students at different levels.</li>
+        <li>Technical depth in mechanics (drivetrains, lifts, intakes) and programming (C++, Python, PROS, or VEXcode).</li>
+        <li>Knows the Override game and rules, or can master the game manual including the VEX U section.</li>
+        <li>Knows the engineering notebook and judging interview process.</li>
+        <li>A fixed weekly schedule (suggested two 2–3 hour sessions a week, more before events) and presence on competition day.</li>
+      </ul>
+      <h3>Nice to have</h3>
+      <ul>
+        <li>Experience at Worlds or a Signature Event.</li>
+        <li>Strategy and scouting experience.</li>
+        <li>Fluent Arabic or English, ideally both.</li>
+        <li>Experience running practice schedules and managing a small team.</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+<!-- 14 -->
+<details class="sec">
+  <summary><span class="num">14</span><h2>VEX timeline<small>September 2026 to April 2027</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>The season runs from team formation in late September through design in November, build and programming over winter, and competition prep in early February, leading to the Saudi Championship and World Championship preparation from February to April 2027.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <ol class="steps">
+        <li><span class="when">Sep 27 – Oct 2</span><b>Team formation</b>Recruit members, assign roles, set goals</li>
+        <li><span class="when">Oct 3 – Oct 9</span><b>Game analysis</b>Study Override, understand rules, analyze scoring</li>
+        <li><span class="when">Oct 10 – Oct 23</span><b>Strategy</b>Build game strategy, prioritize scoring, plan autonomous</li>
+        <li><span class="when">Oct 24 – Nov 20</span><b>Design</b>Brainstorm, sketch, prototype, finalize design</li>
+        <li><span class="when">Nov 21 – Jan 16</span><b>Build &amp; program</b>Mechanical build, wiring, programming, autonomous</li>
+        <li><span class="when">Jan 17 – Jan 30</span><b>Test &amp; optimize</b>Test mechanisms, improve reliability, driver practice, skills</li>
+        <li><span class="when">Jan 31 – Feb 6</span><b>Competition prep</b>Engineering notebook, team presentation, mock matches, final checks</li>
+        <li><span class="when">Feb – Apr 2027</span><b>National to Worlds</b>Saudi Championship, final improvements, World Championship preparation</li>
+      </ol>
+    </details>
+  </div>
+</details>
+
+<!-- 15 -->
+<details class="sec">
+  <summary><span class="num">15</span><h2>VEX equipment<small>Competition parts requested</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>29 VEX items totaling 13,169.68 SAR, covering motors, sensors, structure, controllers, safety glasses, field tiles, and the 2026–27 Override game kit. The largest items are the game kit, the smart motors, and the pneumatics kits.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full list</span><span class="lbl-close">Hide list</span></summary>
+      <div class="tbl"><table>
+        <thead><tr><th>Item</th><th class="r">Qty</th><th class="r">Unit (SAR)</th><th class="r">Total (SAR)</th></tr></thead>
+        <tbody>
+          <tr><td>Full Field Tile Kit</td><td class="r">1</td><td class="r">1,048.09</td><td class="r">1,048.09</td></tr>
+          <tr><td>V5 Pneumatics Kit</td><td class="r">2</td><td class="r">581.23</td><td class="r">1,162.46</td></tr>
+          <tr><td>VEXnet Competition Switch</td><td class="r">1</td><td class="r">78.71</td><td class="r">78.71</td></tr>
+          <tr><td>Inertial Sensor</td><td class="r">4</td><td class="r">208.09</td><td class="r">832.35</td></tr>
+          <tr><td>Distance Sensor</td><td class="r">2</td><td class="r">187.46</td><td class="r">374.93</td></tr>
+          <tr><td>Aluminum C-Channel 6-pack</td><td class="r">4</td><td class="r">167.59</td><td class="r">670.35</td></tr>
+          <tr><td>Standoff Retainer 10-pack</td><td class="r">2</td><td class="r">23.59</td><td class="r">47.18</td></tr>
+          <tr><td>Omni-Directional Anti-Static Wheel 2-pack</td><td class="r">4</td><td class="r">115.84</td><td class="r">463.35</td></tr>
+          <tr><td>V5 Smart Motor 11W</td><td class="r">10</td><td class="r">187.46</td><td class="r">1,874.63</td></tr>
+          <tr><td>Smart Motor 36:1 Cartridge</td><td class="r">6</td><td class="r">49.84</td><td class="r">299.55</td></tr>
+          <tr><td>GPS Field Code Strip Set v2</td><td class="r">1</td><td class="r">156.71</td><td class="r">156.71</td></tr>
+          <tr><td>Rotation Sensor</td><td class="r">4</td><td class="r">166.09</td><td class="r">664.35</td></tr>
+          <tr><td>Straight Flex Wheel</td><td class="r">6</td><td class="r">9.34</td><td class="r">56.03</td></tr>
+          <tr><td>VersaHex Adapters v2 8-pack</td><td class="r">3</td><td class="r">26.21</td><td class="r">78.64</td></tr>
+          <tr><td>Plastic VersaHub Spacer</td><td class="r">1</td><td class="r">11.21</td><td class="r">11.21</td></tr>
+          <tr><td>Aluminum VersaHub</td><td class="r">1</td><td class="r">33.71</td><td class="r">33.71</td></tr>
+          <tr><td>Plastic VersaHub</td><td class="r">1</td><td class="r">11.21</td><td class="r">11.21</td></tr>
+          <tr><td>Nylon Spacer Variety Pack</td><td class="r">4</td><td class="r">23.59</td><td class="r">94.35</td></tr>
+          <tr><td>12-inch Drive Shaft 4-pack</td><td class="r">4</td><td class="r">41.96</td><td class="r">167.85</td></tr>
+          <tr><td>24-inch High Strength Shaft 2-pack</td><td class="r">4</td><td class="r">71.21</td><td class="r">284.85</td></tr>
+          <tr><td>Linear Motion Kit v2</td><td class="r">4</td><td class="r">118.09</td><td class="r">472.35</td></tr>
+          <tr><td>Rack Gearbox Bracket v2</td><td class="r">4</td><td class="r">46.09</td><td class="r">184.35</td></tr>
+          <tr><td>Tool Kit</td><td class="r">2</td><td class="r">14.21</td><td class="r">28.43</td></tr>
+          <tr><td>Performance Tool Kit</td><td class="r">1</td><td class="r">183.71</td><td class="r">183.71</td></tr>
+          <tr><td>Smart Cables, short assortment</td><td class="r">4</td><td class="r">24.34</td><td class="r">97.35</td></tr>
+          <tr><td>Smart Cables, long assortment</td><td class="r">4</td><td class="r">48.34</td><td class="r">193.35</td></tr>
+          <tr><td>V5 Controller</td><td class="r">2</td><td class="r">486.17</td><td class="r">972.34</td></tr>
+          <tr><td>VEX Safety Glasses</td><td class="r">10</td><td class="r">37.46</td><td class="r">374.63</td></tr>
+          <tr><td>2026–27 Override Full Game &amp; Field Element Kit</td><td class="r">1</td><td class="r">2,252.66</td><td class="r">2,252.66</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3">VEX equipment subtotal</td><td class="r">13,169.68</td></tr></tfoot>
+      </table></div>
+    </details>
+  </div>
+</details>
+
+<!-- 16 -->
+<details class="sec">
+  <summary><span class="num">16</span><h2>Additional technical resources<small>Kits, computers, software, merch</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>Beyond VEX, the club is requesting LEGO SPIKE Prime and Arduino kits for workshops, a high-performance PC and workstation for programming and 3D design, software subscriptions, and printing and merch, about 23,400 SAR in total.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <div class="tbl"><table>
+        <thead><tr><th>Resource</th><th class="r">Qty</th><th class="r">Cost (SAR)</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>LEGO Education SPIKE Prime Expansion Set 45678</td><td class="r">2</td><td class="r">5,400.00</td><td>Robotics learning and prototyping</td></tr>
+          <tr><td>LEGO Education SPIKE Prime Expansion Set 45681</td><td class="r">1</td><td class="r">862.50</td><td>Robotics learning and prototyping</td></tr>
+          <tr><td>Advanced Kit for Arduino UNO Projects</td><td class="r">2</td><td class="r">1,138.00</td><td>Embedded systems and Arduino workshops</td></tr>
+          <tr><td>Printing + merch</td><td class="r">TBD</td><td class="r">≈ 5,000</td><td>Club identity, events, and outreach</td></tr>
+          <tr><td>App &amp; software subscriptions</td><td class="r">–</td><td class="r">≈ 2,000</td><td>Programming, design, and productivity tools</td></tr>
+          <tr><td>PC</td><td class="r">1</td><td class="r">≈ 9,000</td><td>Programming, 3D design, robotics, VEX</td></tr>
+          <tr><td>Workstation computer</td><td class="r">1</td><td class="r">Not listed</td><td>High-performance development</td></tr>
+        </tbody>
+      </table></div>
+      <div class="grid">
+        <div class="card"><h3>Workstation specs</h3>
+          <ul><li>CPU: Ryzen 9 / Core Ultra 9</li><li>GPU: RTX 5070 Ti 16GB</li><li>RAM: 64GB DDR5</li><li>Storage: 2TB NVMe SSD</li><li>PSU: 850W Gold</li><li>OS: Windows 11 Pro</li></ul></div>
+        <div class="card"><h3>PC specs</h3>
+          <ul><li>CPU: Intel Core Ultra 7 / Core i7</li><li>GPU: RTX 5070 12GB or equivalent</li><li>RAM: 32GB DDR5, expandable to 64GB</li><li>Storage: 2TB NVMe PCIe Gen 4 SSD</li><li>DDR5 motherboard with Wi-Fi and Bluetooth</li><li>Strong CPU cooling and case airflow</li><li>Windows 11 Pro 64-bit, USB-C</li><li>2–3 year warranty, upgradeable parts</li></ul></div>
+      </div>
+    </details>
+  </div>
+</details>
+
+<!-- 17 -->
+<details class="sec">
+  <summary><span class="num">17</span><h2>Budget summary<small>Fall 2026 funding request</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>SHIFT is requesting 36,570.18 SAR for Fall 2026, needed by mid-October, to support VEX competition prep, workshops, and technical development through April 2027. If only partly funded, essential competition and safety items come first.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <div class="tbl"><table>
+        <tbody>
+          <tr><td>Club</td><td>SHIFT Robotics, Programming &amp; AI Club</td></tr>
+          <tr><td>Requested by</td><td>Raneem Alqahtani, President</td></tr>
+          <tr><td>Submitted</td><td>29 September 2026</td></tr>
+          <tr><td>Request period</td><td>Fall 2026</td></tr>
+          <tr><td>Funds needed</td><td>15–22 October 2026</td></tr>
+          <tr><td>Activity period</td><td>October 2026 – April 2027</td></tr>
+          <tr><td>Expected participation</td><td>21 students</td></tr>
+          <tr><td><b>Total requested</b></td><td><b>36,570.18 SAR</b></td></tr>
+        </tbody>
+      </table></div>
+      <h3>Justification</h3>
+      <p>The funding supports VEX competition preparation and provides resources for practice, technical development, workshops, and future competitions, helping KU students build robotics, programming, problem-solving, teamwork, and engineering skills.</p>
+      <h3>If partially funded</h3>
+      <p>The club will prioritize essential competition and safety resources first, and look to borrow remaining equipment from other teams, clubs, or university and community connections.</p>
+    </details>
+  </div>
+</details>
+
+<!-- 18 -->
+<details class="sec">
+  <summary><span class="num">18</span><h2>Supporting information<small>Suppliers and contacts</small></h2><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+  <div class="body">
+    <div class="brief"><p>Equipment comes from three suppliers: Science Industry Trading Co., VEX Robotics, and Scientific Village Store. The club is led by President Raneem Alqahtani with Prof. Saif Safwan as faculty advisor.</p></div>
+    <details class="more"><summary><span class="lbl-open">Show full details</span><span class="lbl-close">Hide details</span></summary>
+      <h3>Procurement sources</h3>
+      <ul>
+        <li><a href="https://3-industry.site/ar" target="_blank" rel="noopener">شركة صناعة العلوم للتجارة (Science Industry Trading Co.)</a></li>
+        <li><a href="https://www.vexrobotics.com/" target="_blank" rel="noopener">VEX Robotics</a></li>
+        <li><a href="https://qariya.net/en/product/arduino-starter-kit-advanced/" target="_blank" rel="noopener">Scientific Village Store, Arduino Advanced Kit</a></li>
+      </ul>
+      <h3>Contacts</h3>
+      <ul>
+        <li>Club President: Raneem Alqahtani</li>
+        <li>Faculty Advisor: Prof. Saif Safwan</li>
+      </ul>
+    </details>
+  </div>
+</details>
+
+</main>
+
+</div>
+<footer><div class="wrap">
+  <p>SHIFT Robotics, Programming &amp; AI Club, Kingdom University, 2026–2027. This handbook describes the club's planned activities, structure, resources, and requirements for the academic year.</p>
+</div></footer>
+
+<script>
+(function(){
+  var secs = document.querySelectorAll('details.sec');
+  document.getElementById('openAll').addEventListener('click', function(){
+    secs.forEach(function(d){ d.open = true; });
+  });
+  document.getElementById('closeAll').addEventListener('click', function(){
+    secs.forEach(function(d){ d.open = false; d.querySelectorAll('details.more').forEach(function(m){ m.open = false; }); });
+  });
+})();
+</script>
+</body>
+</html>
